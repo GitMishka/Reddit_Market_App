@@ -18,6 +18,7 @@ cur.execute("""
     CREATE TABLE IF NOT EXISTS termlog (
         id TEXT PRIMARY KEY,
         term TEXT,
+        subreddit text,
         post_time TIMESTAMP
     )
 """)
