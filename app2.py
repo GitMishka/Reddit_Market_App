@@ -65,7 +65,6 @@ subreddit = reddit.subreddit(subreddit_name)
 twilio_client = Client(config.twilio_account_sid, config.twilio_auth_token)
 
 while True:
-    # Get the items_to_search from the termlog table
     cur.execute("""
         SELECT term FROM termlog WHERE subreddit = %s
     """, (subreddit_name,))
